@@ -4,7 +4,10 @@
 <p>カテゴリ
   <br><%= @post.category%></br>
 </p>
-<p>
-  <br>本文<%= @post.body%></br>
+<p>本文
+  <br><%= @post.body%></br>
 </p>
+
+<p><%= link_to "更新", edit_post_path(@post.id) %></p>
+<p><%= link_to "削除", post_path(@post.id), method: :delete%></p>
 

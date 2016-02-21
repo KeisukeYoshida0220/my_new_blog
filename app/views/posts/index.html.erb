@@ -1,10 +1,10 @@
 <h1>投稿記事一覧</h1>
-
+  <p><%= link_to "新規作成", new_post_path %></p>
 <% @posts.each do |post| %>
   <h2>タイトル:<%= post.title%></h2>
   <h2>カテゴリ:<%= post.category%></h2>
   <h2>本文:<%= post.body%></h2>
   <%= link_to "詳細",  post_path(post.id) %>
   <%= link_to "更新",  edit_post_path(post.id) %>
-<%= link_to "削除",  post_path(post.id), method:  :delete %>
+  <%= link_to "削除",  post_path(post.id), method:  :delete %>
 <% end %>
